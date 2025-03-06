@@ -1,0 +1,30 @@
+# Ignorar el archivo .env (contiene variables sensibles)
+.env
+
+# Ignorar la carpeta de entorno virtual
+.venv/
+venv/
+env/
+
+# Ignorar archivos de configuración de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+# Ignorar archivos de configuración de IDE
+.vscode/
+.idea/
+
+# Ignorar archivos de credenciales de Google
+credentials.json
+
+# Ignorar archivos de caché de Python
+.pytest_cache/
+.mypy_cache/
+
+# Ignorar archivos generados por el sistema
+.DS_Store
+Thumbs.db

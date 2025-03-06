@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap" rel="stylesheet">
+</head>
+<body class="results">
+    <a href="{{ url_for('index') }}" class="restart-button">Reiniciar Test</a>
+    <div class="results-container">
+        <h1>Resultados del Test</h1>
+        <p>Hola, <strong>{{ user_data['name'] }}</strong>. Basado en tus respuestas, estas son algunas áreas de estudio que podrías considerar:</p>
+        <div class="results">
+            {% for line in results.split('\n') %}
+                {% if line.startswith('1.') or line.startswith('2.') or line.startswith('3.') %}
+                    <p>{{ line | replace('**', '<strong>') | replace('**', '</strong>') | safe }}</p>
+                {% elif line.startswith('Explicación:') %}
+                    <p><strong>{{ line }}</strong></p>
+                {% else %}
+                    <p>{{ line }}</p>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <a href="{{ url_for('index') }}" class="restart-button">Reiniciar Test</a>
+    </div>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>

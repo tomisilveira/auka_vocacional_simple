@@ -1,0 +1,255 @@
+/* Estilos generales para transiciones */
+body {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500; /* Manrope Medium */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    transition: opacity 1s ease-in-out; /* Aumentar la duración a 1 segundo */
+}
+
+/* Ocultar el cuerpo al cargar */
+body.hidden {
+    opacity: 0;
+}
+
+/* Estilos para el botón de reinicio */
+.restart-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #ff4d4d;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    z-index: 1000; /* Asegurar que esté por encima de otros elementos */
+}
+
+.restart-button:hover {
+    background-color: #cc0000;
+}
+
+/* Estilos para la página de inicio (index.html) */
+body.index {
+    background-image: url('fondo-index.jpg'); /* Imagen de fondo para index.html */
+}
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #218838;
+}
+
+/* Estilos para la página del test (test.html) */
+body.test {
+    background-image: url('fondo-test.jpg'); /* Imagen de fondo para test.html */
+}
+
+.test-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    text-align: left; /* Alinear el texto del contenedor a la izquierda */
+}
+
+.test-container h1 {
+    text-align: center; /* Centrar el título */
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.test-container .question {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left; /* Alinear la pregunta a la izquierda */
+}
+
+.test-container .options {
+    text-align: left; /* Alinear las opciones a la izquierda */
+    margin-bottom: 20px;
+}
+
+.test-container .options label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    text-align: left; /* Alinear el texto de las opciones a la izquierda */
+}
+
+.test-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.test-container button:hover {
+    background-color: #218838;
+}
+
+/* Estilos para la página de resultados (results.html) */
+body.results {
+    background-image: url('fondo-results.jpg'); /* Imagen de fondo para results.html */
+}
+
+.results-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+.results-container h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.results-container p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.results {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.results p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.results strong {
+    font-weight: 500; /* Manrope Medium */
+    color: #28a745; /* Color verde para resaltar */
+}
+
+.restart-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.restart-button:hover {
+    background-color: #218838;
+}
+
+/* Diseño responsive */
+@media (max-width: 600px) {
+    .form-container, .test-container, .results-container {
+        padding: 15px;
+    }
+
+    .form-container input[type="text"],
+    .form-container input[type="email"],
+    .form-container input[type="number"],
+    .form-container button,
+    .test-container button,
+    .restart-button {
+        font-size: 14px;
+    }
+
+    .test-container .question {
+        font-size: 16px;
+    }
+
+    .test-container .options label {
+        font-size: 14px;
+    }
+}
+
+/* Estilos para los carteles de carga */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Asegurar que esté por encima de otros elementos */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+.loading-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.loading-message {
+    background-color: #28a745; /* Color principal de la página */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    color: white; /* Texto en blanco para contrastar */
+    text-align: center;
+}
