@@ -30,7 +30,7 @@ Sigue estos pasos para configurar y ejecutar el proyecto en tu entorno local:
 
 1. **Clona el Repositorio**:
    ```bash
-   git clone https://github.com/tu-usuario/auka-vocacional.git
+   git clone https://github.com/tomisilveira/auka_vocacional_simple
    cd auka-vocacional
 
    Instala las Dependencias:
@@ -105,9 +105,9 @@ Este proyecto está bajo la licencia MIT. Consulta el archivo LICENSE para más 
 Contacto
 Si tienes alguna pregunta o sugerencia, no dudes en contactarme:
 
-Nombre: [Tu Nombre]
+Nombre: Tomás Santiago Silveira
 
-Email: [tu-email@example.com]
+Email: [tsilveira@neuquen.gov.ar]
 
 GitHub: tu-usuario
 
