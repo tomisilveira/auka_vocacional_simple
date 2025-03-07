@@ -4,6 +4,7 @@ import os
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 from dotenv import load_dotenv
+import json  # Importa el módulo json
 
 # Cargar variables de entorno desde .env
 load_dotenv()
@@ -20,11 +21,14 @@ model = genai.GenerativeModel('models/gemini-1.5-flash')
 # Configura la API de Google Sheets
 def setup_google_sheets():
     scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-    creds = ServiceAccountCredentials.from_json_keyfile_dict(
-        eval(os.getenv("GOOGLE_CREDENTIALS_JSON")), scope
-    )
+    
+    # Cargar las credenciales desde el archivo credentials.json
+    with open('credentials.json', 'r') as f:
+        google_credentials = json.load(f)
+    
+    creds = ServiceAccountCredentials.from_json_keyfile_dict(google_credentials, scope)
     client = gspread.authorize(creds)
-    sheet = client.open("Auka_Vocacional_Data").sheet1  # Nombre de la hoja de cálculo
+    sheet = client.open_by_key("1TBaGm-1YKtEAgannCI98mahSY1PFtkwvqOAlc1l2cFo").sheet1
     return sheet
 
 # Guardar datos en Google Sheets

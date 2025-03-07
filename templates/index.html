@@ -10,22 +10,56 @@
 <body class="index">
     <div class="form-container">
         <h1>Bienvenido a Auka Vocacional</h1>
-        <form action="{{ url_for('start_test') }}" method="POST" data-loading-message="Iniciando test...">
+        <form action="{{ url_for('start_test') }}" method="POST" data-loading-message="Iniciando test..." onsubmit="return validateForm()">
             <label for="name">Nombre:</label>
             <input type="text" id="name" name="name" required>
             
             <label for="email">Correo electrónico:</label>
             <input type="email" id="email" name="email" required>
             
-            <label for="location">Ubicación:</label>
-            <input type="text" id="location" name="location" required>
+            <label for="location">Localidad:</label>
+            <select id="location" name="location" required>
+                <option value="">Selecciona una localidad</option>
+            </select>
             
             <label for="age">Edad:</label>
-            <input type="number" id="age" name="age" required>
+            <input type="text" id="age" name="age" list="age-list" required>
+            <datalist id="age-list">
+                <!-- Opciones de edad de 14 a 40 -->
+                <option value="14">
+                <option value="15">
+                <option value="16">
+                <option value="17">
+                <option value="18">
+                <option value="19">
+                <option value="20">
+                <option value="21">
+                <option value="22">
+                <option value="23">
+                <option value="24">
+                <option value="25">
+                <option value="26">
+                <option value="27">
+                <option value="28">
+                <option value="29">
+                <option value="30">
+                <option value="31">
+                <option value="32">
+                <option value="33">
+                <option value="34">
+                <option value="35">
+                <option value="36">
+                <option value="37">
+                <option value="38">
+                <option value="39">
+                <option value="40">
+                <option value="+40">
+            </datalist>
             
             <button type="submit">Iniciar Test</button>
         </form>
     </div>
+    <script src="{{ url_for('static', filename='localidades.js') }}"></script>
     <script src="{{ url_for('static', filename='scripts.js') }}"></script>
 </body>
 </html>
