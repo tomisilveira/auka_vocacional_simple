@@ -1,5 +1,6 @@
 # Ignorar el archivo .env (contiene variables sensibles)
 .env
+.credentials.json
 
 # Ignorar la carpeta de entorno virtual
 .venv/
