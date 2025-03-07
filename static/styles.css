@@ -40,7 +40,7 @@ body.hidden {
 
 /* Estilos para la página de inicio (index.html) */
 body.index {
-    background-image: url('fondo-index.jpg'); /* Imagen de fondo para index.html */
+    background-image: url('img/fondo\ tablet\ azul\ auka.png'); /* Imagen de fondo para index.html */
 }
 
 .form-container {
@@ -87,7 +87,7 @@ body.index {
 
 /* Estilos para la página del test (test.html) */
 body.test {
-    background-image: url('fondo-test.jpg'); /* Imagen de fondo para test.html */
+    background-image: url('img/fondo\ tablet\ azul\ auka.png'); /* Imagen de fondo para test.html */
 }
 
 .test-container {
@@ -143,7 +143,7 @@ body.test {
 
 /* Estilos para la página de resultados (results.html) */
 body.results {
-    background-image: url('fondo-results.jpg'); /* Imagen de fondo para results.html */
+    background-image: url('img/fondo\ tablet\ clarito\ auka.png'); /* Imagen de fondo para results.html */
 }
 
 .results-container {
